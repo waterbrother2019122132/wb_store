@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/index",
+    "pages/goods_list/index",
+    "pages/goods_detail/index",
+    "pages/cart/index",
+    "pages/collect/index",
+    "pages/order/index",
+    "pages/search/index",
+    "pages/user/index",
+    "pages/feedback/index",
+    "pages/login/index",
+    "pages/auth/index",
+    "pages/pay/index"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00BFFF",
+    "navigationBarTitleText": "水哥商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#0000FF",
+    "selectedColor": "#00BFFF",
+    "backgroundColor": "",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/store1.png",
+        "selectedIconPath": "icons/store.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "icons/cate1.png",
+        "selectedIconPath": "icons/cate.png"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "text": "商场",
+        "iconPath": "icons/cart1.png",
+        "selectedIconPath": "icons/cart.png"
+      },
+      {
+        "pagePath": "pages/login/index",
+        "text": "个人",
+        "iconPath": "icons/person1.png",
+        "selectedIconPath": "icons/person.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
