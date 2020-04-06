@@ -1,0 +1,1 @@
+    //  if(ajaxTimes===0)
