@@ -42,7 +42,23 @@ Page({
       current,
       urls
     });
+  },
+  handleCartAdd(){
+    let cart=wx.getStorageSync("cart")||[];
+    let index=cart.findIndex(v=>v.goods_id===this.GoodsInfo.goods_id);
+    if(index===-1){
+      this.GoodsInfo.num=1;
+      cart.push(this.GoodsInfo);
+    }else{
+      cart[index].num++;
+    }
+  
+  wx.setStorageSync("cart",cart);
+  wx.showToast({
+    title: '不是要剁手吗',
+    icon:"success",
+    mask:true
+  });
+
   }
-
-
 })
