@@ -1,5 +1,49 @@
 <view class="revice_address_row">
-<view class="address_btn">
+<view class="address_btn" wx:if="{{!address.userName}}">
 <button bindtap="handleChooseAddress" type="primary" plain>获取收货地址</button>
+</view>
+
+
+<view wx:else class="user_info_row" >
+<view class="user_info" >
+
+<view >{{address.userName}}</view>
+<view >{{address.all}}</view>
+</view>
+<view class="user_phone" >{{address.telNumber}}</view>
+</view>
+</view>
+
+<view class="cart_content">
+<view class="cart_title">购物车</view>
+<view class="cart_main">
+
+<view class="cart_item">
+<view class="cart_chk_wrap">
+
+<checkbox-group bindchange="">
+
+<checkbox></checkbox>
+</checkbox-group>
+
+
+
+</view>
+<navigator class="cart_img_wrap">
+<image src="http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000010014434010_1_400x400.jpg" mode="widthFix"></image>
+</navigator>
+
+<view class="cart_info_wrap">
+<view class="goods_name">Amoi夏新曲面电视机55英寸 4K全高清安卓系统智能语音无线WiFi网络 48/50蓝光夜晶3D数字彩电 家用超薄窄边</view>
+<view class="goods_price_wrap">
+<view class="goods_price">$8888</view>
+<view class="cart_num_tool">
+<view class="num_edit">-</view>
+<view class="goods_num">10</view>
+<view class="num_edit">+</view>
+</view>
+</view>
+</view>
+</view>
 </view>
 </view>

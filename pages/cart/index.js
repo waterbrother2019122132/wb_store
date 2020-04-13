@@ -2,6 +2,16 @@
 import{getSetting,chooseAddress,openSetting} from "../../utils/asyncWx.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
+
+  data:{
+    address:{}
+  },
+  onShow(){
+    const address=wx.getStorageSync('address');
+    this.setData({
+      address
+    })
+  },
   
 async handleChooseAddress(){
   try{
@@ -14,7 +24,8 @@ async handleChooseAddress(){
     await openSetting();
     
   }
-  const address =await chooseAddress();
+  let address =await chooseAddress();
+  address.all=address.provinceName+address.cityName+address.countyName+address.detailInfo;
   //存入缓存中
   wx.setStorageSync('address', address);
 }catch(error){
